@@ -1,0 +1,51 @@
+
+CREATE TABLE animes (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    year_of_broadcast INTEGER,
+    languages VARCHAR(100)[]  -- Assuming multiple languages are stored as an array
+);
+
+CREATE TABLE anime_characters (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    birth_date DATE,
+    role VARCHAR(100),
+    skills TEXT[]  -- Assuming multiple skills are stored as an array
+);
+
+INSERT INTO animes (title, year_of_broadcast, languages)
+VALUES
+    ('One Piece', 1999, ARRAY['Japanese', 'English']),
+    ('Naruto', 2002, ARRAY['Japanese', 'English']),
+    ('Dragon Ball Z', 1989, ARRAY['Japanese', 'English']),
+    ('Attack on Titan', 2013, ARRAY['Japanese', 'English']),
+    ('Death Note', 2006, ARRAY['Japanese', 'English']),
+    ('My Hero Academia', 2016, ARRAY['Japanese', 'English']),
+    ('Fullmetal Alchemist: Brotherhood', 2009, ARRAY['Japanese', 'English']),
+    ('Demon Slayer', 2019, ARRAY['Japanese', 'English']),
+    ('One Punch Man', 2015, ARRAY['Japanese', 'English']),
+    ('Tokyo Ghoul', 2014, ARRAY['Japanese', 'English']),
+    ('Sword Art Online', 2012, ARRAY['Japanese', 'English']),
+    ('Hunter x Hunter', 2011, ARRAY['Japanese', 'English']),
+    ('Black Clover', 2017, ARRAY['Japanese', 'English']),
+    ('Fairy Tail', 2009, ARRAY['Japanese', 'English']),
+    ('JoJo''s Bizarre Adventure', 2012, ARRAY['Japanese', 'English']);
+
+INSERT INTO anime_characters (name, birth_date, role, skills)
+VALUES
+    ('Monkey D. Luffy', '1994-05-05', 'Protagonist', ARRAY['Rubber powers']),
+    ('Naruto Uzumaki', '1997-10-10', 'Protagonist', ARRAY['Shadow Clone Jutsu', 'Rasengan']),
+    ('Goku', '1973-04-16', 'Protagonist', ARRAY['Super Saiyan transformations']),
+    ('Eren Yeager', '1995-03-30', 'Protagonist', ARRAY['Titan Shifter']),
+    ('Light Yagami', '1986-02-28', 'Antagonist', ARRAY['Genius-level intellect']),
+    ('Deku', '2000-07-15', 'Protagonist', ARRAY['One For All Quirk']),
+    ('Edward Elric', '1899-10-11', 'Protagonist', ARRAY['Alchemy']),
+    ('Tanjiro Kamado', '2001-07-14', 'Protagonist', ARRAY['Water Breathing']),
+    ('Saitama', '1985-12-12', 'Protagonist', ARRAY['One Punch']),
+    ('Ken Kaneki', '1994-12-20', 'Protagonist', ARRAY['Ghoul abilities']),
+    ('Kirito', '2008-10-07', 'Protagonist', ARRAY['Dual-wielding']),
+    ('Gon Freecss', '1999-05-05', 'Protagonist', ARRAY['Nen']),
+    ('Asta', '2001-08-08', 'Protagonist', ARRAY['Anti-Magic']),
+    ('Natsu Dragneel', '2000-11-23', 'Protagonist', ARRAY['Fire Dragon Slayer Magic']),
+    ('Jotaro Kujo', '1970-01-01', 'Protagonist', ARRAY['Stand: Star Platinum']);
