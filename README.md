@@ -2,6 +2,8 @@
 
 Welcome to the SQL Practice Server repository! This repository provides you with a hands-on environment to practice your SQL skills using an anime database. You will be able to run SQL queries, receive instant feedback, and improve your querying techniques.
 
+You can test/preview the practice server at https://anime-sql-practice-server.vercel.app/
+
 ## Open Tasks
 
 - [ ] Clean up code
