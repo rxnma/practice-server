@@ -46,7 +46,7 @@ git clone https://github.com/rxnma/practice-server.git
 
 ### 3. Prepare the Database Schema
 
-In the downloaded repository, locate the `database` folder. If it contains an existing `schema.txt` file, you can delete it. Now, place your desired database schema in a file named `schema.txt` within the `database` folder.
+In the downloaded repository, locate the `database` folder. It contains an existing example `schema.txt` file with an anime database schema which you can replace with your own.
 
 ### 4. Start the Docker Container
 
