@@ -1,4 +1,4 @@
-# SQL Practice Server - Anime Database
+# SQL Practice Server - Anime Database 🗄️
 
 Welcome to the SQL Practice Server repository! This repository provides you with a hands-on environment to practice your SQL skills using an anime database. You will be able to run SQL queries, receive instant feedback, and improve your querying techniques.
 
@@ -25,7 +25,7 @@ You can test/preview the practice server at https://anime-sql-practice-server.ve
   - [Practice Questions](#practice-questions)
     - [1. Set Up Exercises](#1-set-up-exercises)
     - [2. Editing Exercises](#2-editing-exercises)
-    - [3. Fetching Sample Solutions](#3-fetching-sample-solutions)
+    - [3. Automatically populate results](#3-automatically-populate-results)
   - [Contact](#contact)
 
 ## Getting Started
@@ -68,7 +68,7 @@ Under the "testarea" section of the application, you can write and run your SQL 
 
 Unfortunately I haven't come up with a simpler solution yet. I am open to suggestions on how to solve this more elegantly. But for now it goes on like this:
 
-In the `src/app/api/data` folder, you'll find a file named `exercises.ts`. This file contains practice questions and solutions that provide feedback for your SQL queries.
+In the `src/app/api/data` folder, you'll find a file named `exercises.ts`. This file contains practice questions and solutions that provide feedback on your SQL queries.
 
 Follow these steps to create your own set of execises:
 
@@ -84,19 +84,23 @@ To get started with the exercises, follow these steps:
 Edit the `exercises.ts` file using any text editor. For each exercise, provide the necessary information:
 
 - `id`: QuestionID.
-- `category`: SQL query type (aggregation, select, union etc.).
+- `category`: SQL query type (aggregation, select, union etc
 - `level`: Difficulty of the question.
 - `question`: Exercise question.
 - `solution`: Your sample solution if your query is successful.
 - `result`: Expected result set based on your solution query.
 
-You can leave the `results` field blank if you want the exercise endpoint to generate results for you automatically. However, if you have specific result sets in mind, you can manually add them to the `results` field.
+You can leave the `results` field an empty array if you want the exercise endpoint to generate results for you automatically. Alternatively you can also add them by yourself.
 
-### 3. Fetching Sample Solutions
+### 3. Automatically populate results
 
-There is an endpoint available for fetching sample solutions:
+There is an endpoint available for automatically populate results:
 
-- Make a `POST` request to `http://localhost:3000/api/exercises` to receive a list of exercises along with completed solutions (results).
+- Make a `POST` request to `http://localhost:3000/api/exercises` to receive a list of exercises along with completed result sets.
+
+## PRO TIP
+
+You can use ChatGPT to generate a database schema and matching exercises. Just give it the structure of your exercise list and the corresponding database schema. The rest is ChatGPT magic. 🪄
 
 ## Contact
 
