@@ -66,7 +66,7 @@ Under the "testarea" section of the application, you can write and run your SQL 
 
 ## Practice Questions
 
-Unfortunately I haven't come up with a simpler solution here yet, am open to suggestions on how to solve this more elegantly. But for now it goes on like this:
+Unfortunately I haven't come up with a simpler solution yet. I am open to suggestions on how to solve this more elegantly. But for now it goes on like this:
 
 In the `src/app/api/data` folder, you'll find a file named `exercises.ts`. This file contains practice questions and solutions that provide feedback for your SQL queries.
 
